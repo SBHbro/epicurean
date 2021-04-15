@@ -47,7 +47,7 @@
 import axios from "axios";
 import * as EmailValidator from "email-validator";
 
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 
 export default {
   name: "FindPw",

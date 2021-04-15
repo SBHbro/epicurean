@@ -149,7 +149,7 @@ import JoinRule1 from "../user/JoinRule1"
 import JoinRule2 from "../user/JoinRule2"
 import JoinRule3 from "../user/JoinRule3"
 
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 
 export default {
   name: "Join",

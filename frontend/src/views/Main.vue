@@ -129,7 +129,7 @@ import "../assets/css/components.scss";
 import axios from "axios";
 import router from "@/routes";
 
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "https://localhost:8080";
 
 export default {

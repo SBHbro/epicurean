@@ -26,7 +26,7 @@
                         <div v-if="message.userid == userid" style="text-align : right" class = "myMsg">
                             <!-- <v-list-item-avatar style="cursor:pointer;" @click="gotoProfile(lst)">
                                 <img
-                                :src="`https://i3b302.p.ssafy.io:8080/img/user?imgname=`+message.img"
+                                :src="`https://don.sbbro.shop/api/img/user?imgname=`+message.img"
                                 />
                             </v-list-item-avatar>
                              <span class="text-info">[{{ message.nickname }}]: </span> -->
@@ -36,7 +36,7 @@
                         <div v-else style = "text-align : left" class="anotherMsg">
                             <v-list-item-avatar size ="25" style="cursor:pointer;" @click="gotoProfile(lst)">
                                 <img
-                                :src="`https://i3b302.p.ssafy.io:8080/img/user?imgname=`+message.img"
+                                :src="`https://don.sbbro.shop/api/img/user?imgname=`+message.img"
                                 />
                             </v-list-item-avatar>
                             <span class="" style ="font-size: 1.1em; color= gray;">{{ message.nickname }}<br></span>
@@ -62,7 +62,7 @@ import moment from 'moment';
 import axios from "axios";
 import router from "@/routes";
 
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "https://localhost:8080";
 
 

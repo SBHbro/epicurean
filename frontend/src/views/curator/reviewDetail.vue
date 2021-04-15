@@ -114,7 +114,7 @@
               <v-divider></v-divider>
               <v-list-item>
                 <v-list-item-avatar>
-                  <v-img :src="'https://i3b302.p.ssafy.io:8080/img/user?imgname='+reviewCommentmember[i].userImg"/>
+                  <v-img :src="'https://don.sbbro.shop/api/img/user?imgname='+reviewCommentmember[i].userImg"/>
                 </v-list-item-avatar>
 
                 <v-list-item-content>
@@ -161,7 +161,7 @@
 import axios from "axios";
 import router from "@/routes";
 
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "https://localhost:8080";
 
 export default {
@@ -192,7 +192,7 @@ export default {
     )
     .then((response) => {
       this.user = response.data;
-      this.user.userImg = "https://i3b302.p.ssafy.io:8080/img/user?imgname="+ this.user.userImg
+      this.user.userImg = "https://don.sbbro.shop/api/img/user?imgname="+ this.user.userImg
     })
     .catch((error) => {
       // console.log(error.response);
@@ -215,7 +215,7 @@ export default {
           for (let i = 0; i < this.members.length; i++) {
             if(this.members[i].userId == this.meetup.master){
               this.master = this.members[i];
-              this.master.userImg = "https://i3b302.p.ssafy.io:8080/img/user?imgname="+ this.master.userImg
+              this.master.userImg = "https://don.sbbro.shop/api/img/user?imgname="+ this.master.userImg
               break;
             }
           }

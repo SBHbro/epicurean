@@ -23,7 +23,7 @@
           <!-- 유저 프로필 사진-->
           <v-list-item-avatar style="cursor:pointer;" @click="gotoProfile(lst)">
             <img
-                :src="`https://i3b302.p.ssafy.io:8080/img/user?imgname=`+this.postlst.user_img"
+                :src="`https://don.sbbro.shop/api/img/user?imgname=`+this.postlst.user_img"
               />
 
           </v-list-item-avatar>
@@ -81,7 +81,7 @@
 
         <!-- 피드 이미지 -->
         <v-img
-          :src="`https://i3b302.p.ssafy.io:8080/img/post?imgname=`+postlst.post_img_url"
+          :src="`https://don.sbbro.shop/api/img/post?imgname=`+postlst.post_img_url"
         ></v-img>
 
         <!-- 좋아요/댓글 버튼 -->
@@ -143,7 +143,7 @@ import AddFeed from "../feed/addFeed";
 
 Vue.use(vueMoment);
 
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "https://localhost:8080";
 
 export default {

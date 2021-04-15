@@ -17,7 +17,7 @@
                            @click="chatGo(item)"
                         >
                         <v-list-item-avatar>
-                            <v-img :src="`https://i3b302.p.ssafy.io:8080/img/user?imgname=`+item.viewImg"></v-img>
+                            <v-img :src="`https://don.sbbro.shop/api/img/user?imgname=`+item.viewImg"></v-img>
                         </v-list-item-avatar>
 
                         <v-list-item-content>
@@ -40,7 +40,7 @@ import axios from "axios";
 import router from "@/routes";
 import moment from 'moment';
 
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "https://localhost:8080";
 
 

@@ -33,7 +33,7 @@
               <v-list>
                 <v-list-item>
                   <v-list-item-avatar>
-                    <img :src="`https://i3b302.p.ssafy.io:8080/img/user?imgname=`+ userimg"/>
+                    <img :src="`https://don.sbbro.shop/api/img/user?imgname=`+ userimg"/>
                   </v-list-item-avatar>
                     <v-list-item-content>
                       <v-list-item-title><strong>{{username}}</strong></v-list-item-title>
@@ -91,7 +91,7 @@
                         id="imageview"
                         style="width: 100%;border: 1px solid; border-radius: 10px;"
                         v-if="userpage1&&userpage2"
-                        :src="`https://i3b302.p.ssafy.io:8080/img/post?imgname=`+postimg"
+                        :src="`https://don.sbbro.shop/api/img/post?imgname=`+postimg"
                       />
                       <img
                         v-show="showImg"
@@ -99,7 +99,7 @@
                         id="imageview"
                         style="width: 100%;border: 1px solid; border-radius: 10px;"
                         v-else-if="revise && revise3"
-                        :src="`https://i3b302.p.ssafy.io:8080/img/post?imgname=`+postimg"
+                        :src="`https://don.sbbro.shop/api/img/post?imgname=`+postimg"
                       />
                       <img 
                         v-show="showImg"
@@ -124,7 +124,7 @@
 import axios from "axios";
 import router from "@/routes";
 
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "https://localhost:8080";
 
 export default {
@@ -143,7 +143,7 @@ export default {
       
       showImg : true,
       content : '',
-      imgPath : 'https://i3b302.p.ssafy.io:8080/img/post?imgname=',
+      imgPath : 'https://don.sbbro.shop/api/img/post?imgname=',
       img : 'no_image.jpg',
     };
   },

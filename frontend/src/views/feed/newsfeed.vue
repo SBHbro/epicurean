@@ -35,7 +35,7 @@
           <!-- 유저 프로필 사진-->
           <v-list-item-avatar style="cursor:pointer;" @click="gotoProfile(lst)">
             <img
-              :src="`https://i3b302.p.ssafy.io:8080/img/user?imgname=`+lst.user_img"
+              :src="`https://don.sbbro.shop/api/img/user?imgname=`+lst.user_img"
             />
           </v-list-item-avatar>
 
@@ -89,7 +89,7 @@
 
         <!-- 피드 이미지 -->
         <v-img
-          :src="`https://i3b302.p.ssafy.io:8080/img/post?imgname=`+lst.postimgurl"
+          :src="`https://don.sbbro.shop/api/img/post?imgname=`+lst.postimgurl"
           min-height="300" max-height="450" 
         ></v-img>
 
@@ -166,7 +166,7 @@ import AddFeed from "./addFeed";
 
 Vue.use(vueMoment);
 
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "https://localhost:8080";
 
 export default {
@@ -269,7 +269,7 @@ export default {
       }
       // 타 유저 프로필 페이지로 이동
       else{
-        let userImg = `https://i3b302.p.ssafy.io:8080/img/user?imgname=`+user.user_img;
+        let userImg = `https://don.sbbro.shop/api/img/user?imgname=`+user.user_img;
          this.$router.push('/user/profile?userId='+user.postuserid
         +'&followerFollowing='+true
         +'&userImg='+userImg);

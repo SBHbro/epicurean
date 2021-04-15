@@ -20,7 +20,7 @@
       >
         <v-list-item-avatar @click="showUser(guest)">
           <v-img
-            :src="'https://i3b302.p.ssafy.io:8080/img/user?imgname='+guest.userImg">
+            :src="'https://don.sbbro.shop/api/img/user?imgname='+guest.userImg">
           </v-img>
         </v-list-item-avatar>
 
@@ -70,7 +70,7 @@
         <v-list-item>
           <v-list-item-avatar>
             <v-img
-                :src="'https://i3b302.p.ssafy.io:8080/img/user?imgname='+this.userImg">
+                :src="'https://don.sbbro.shop/api/img/user?imgname='+this.userImg">
               </v-img>
           </v-list-item-avatar>
           <v-list-item-content>
@@ -95,7 +95,7 @@
 <script>
 
 import axios from "axios";
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "https://localhost:8080";
 export default {
   name: "components",
@@ -203,7 +203,7 @@ export default {
         .catch((error) => {
           // console.log(error.response);
         });
-        let userImg = `https://i3b302.p.ssafy.io:8080/img/user?imgname=`+user.userImg;
+        let userImg = `https://don.sbbro.shop/api/img/user?imgname=`+user.userImg;
          this.$router.push('/user/profile?userId='+user.userId
         +'&followerFollowing='+flag
         +'&userImg='+userImg);

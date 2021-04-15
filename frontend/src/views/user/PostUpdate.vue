@@ -34,7 +34,7 @@
               <a class="a-img1 a-img2" href="#" tabindex="0" style="width: 32px; height: 32px;">
                 <img
                   style="height: 100%; width: 100%;"
-                  :src="`https://i3b302.p.ssafy.io:8080/img/user?imgname=`+this.userimg"
+                  :src="`https://don.sbbro.shop/api/img/user?imgname=`+this.userimg"
                 />
               </a>
             </div>
@@ -65,7 +65,7 @@
             <div class="fc-fr">
               <img
                 style="height: 350px;"
-                :src="`https://i3b302.p.ssafy.io:8080/img/post?imgname=`+this.postimgurl"
+                :src="`https://don.sbbro.shop/api/img/post?imgname=`+this.postimgurl"
                 class="fc-img"
               />
             </div>
@@ -85,7 +85,7 @@
 import axios from "axios";
 import router from "@/routes";
 
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "https://localhost:8080";
 
 export default {

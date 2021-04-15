@@ -2,7 +2,7 @@
   <v-layout>
     <v-toolbar dense flat>
       <v-list-item-avatar>
-        <v-img :src="'https://i3b302.p.ssafy.io:8080/img/user?imgname='+proptoTopsub.userImg"></v-img>
+        <v-img :src="'https://don.sbbro.shop/api/img/user?imgname='+proptoTopsub.userImg"></v-img>
       </v-list-item-avatar>
 
         {{proptoTopsub.userNickname}}
@@ -21,7 +21,7 @@
 import router from "@/routes";
 import axios from "axios";
 
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 
 export default {
   props:{

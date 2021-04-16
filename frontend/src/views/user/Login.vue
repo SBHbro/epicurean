@@ -72,7 +72,7 @@
 // import "../../components/css/user.scss";
 import PV from "password-validator";
 import * as EmailValidator from "email-validator";
-import KakaoLogin from "../../components/user/snsLogin/Kakao.vue";
+import kakaoLogin from "../../components/user/snsLogin/Kakao.vue";
 import GoogleLogin from "../../components/user/snsLogin/Google.vue";
 import UserApi from "../../api/UserApi";
 import axios from "axios";
@@ -82,7 +82,7 @@ const SERVER_URL = "https://don.sbbro.shop/api";
 
 export default {
   components: {
-    KakaoLogin,
+    kakaoLogin,
     GoogleLogin,
   },
   data: () => {

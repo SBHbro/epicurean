@@ -329,7 +329,7 @@ export default {
         });
       }
 
-      if (window.kakao && window.kakao.maps) {
+      if (window.Kakao && window.Kakao.maps) {
         // // console.log("이미 로딩됨");
         this.initMap();
       } else {

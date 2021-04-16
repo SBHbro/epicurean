@@ -136,7 +136,7 @@ export default {
       });
     }
 
-    if (window.kakao && window.kakao.maps) {
+    if (window.Kakao && window.Kakao.maps) {
       // this.initMap();
     }else{
       const script = document.createElement("script");

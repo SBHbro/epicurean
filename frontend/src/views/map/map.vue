@@ -371,17 +371,17 @@ export default {
     }
 
     // 카카오 맵 로딩
-    // if (window.kakao && window.kakao.maps) {
-    //   // console.log("이미 로딩됨");
-    //   // this.initMap();
-    // } else {
+    if (window.Kakao && window.Kakao.maps) {
+      console.log("이미 로딩됨");
+      this.initMap();
+    } else {
       const script = document.createElement("script");
       /* global kakao */
       script.onload = () => kakao.maps.load(this.initMap);
       script.src =
         "https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=6192aa4fccde619ea3ac09491e57abd0&libraries=services";
       document.head.appendChild(script);
-    // }
+    }
   },
   methods: {
     clearMarkersAndOverays(){

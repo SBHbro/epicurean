@@ -19,8 +19,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import java.time.LocalDateTime;
 
 @Entity
-@Data
 @NoArgsConstructor
+@Data
 @AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class User {

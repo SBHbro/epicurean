@@ -3,10 +3,10 @@ package com.web.curation.model.user;
 
 import lombok.*;
 
+@NoArgsConstructor
 @Data
 @ToString
 @AllArgsConstructor
-@NoArgsConstructor
 @Builder
 public class AuthenticationRequest {
     

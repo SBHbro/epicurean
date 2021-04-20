@@ -140,7 +140,7 @@ export default {
         },
         view(room){
             // // console.log('이미지',this.userImg);
-             window.db.collection('test').doc(this.room.rid).collection('messages').orderBy('time').onSnapshot(snapshot=>{
+             window.db.collection('chat').doc(this.room.rid).collection('messages').orderBy('time').onSnapshot(snapshot=>{
                     
                   snapshot.docChanges().forEach(change =>{
                     if (change.type == 'added'){

@@ -8,6 +8,7 @@ import vuetify from '@/plugins/vuetify'
 import VueCookie from 'vue-cookie'
 
 import VueChatScroll from 'vue-chat-scroll';
+import firestoreConfig from './firestoreConfig'
 Vue.use(VueChatScroll);
 
 import VueSimpleAlert from "vue-simple-alert";
@@ -16,15 +17,8 @@ window.Kakao.init("6192aa4fccde619ea3ac09491e57abd0");
 
 import firebase from 'firebase'
 
-var config = { apiKey: "AIzaSyClT8BESKIzQIZuPN0Xw8gks4w6HOTIiLM",
-    authDomain: "taste-ac33e.firebaseapp.com",
-    databaseURL: "https://taste-ac33e.firebaseio.com",
-    projectId: "taste-ac33e",
-    storageBucket: "taste-ac33e.appspot.com",
-    messagingSenderId: "706725717763",
-    appId: "1:706725717763:web:7631b8082177166451eb36",
-    measurementId: "G-P3SKG9RZF8"};
-firebase.initializeApp(config);
+console.log(firestoreConfig)
+firebase.initializeApp(firestoreConfig);
 firebase.firestore().settings({timestampsInSnapshots:true});
 
 var db = firebase.firestore();

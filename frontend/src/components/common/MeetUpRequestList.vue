@@ -126,7 +126,7 @@ export default {
 
             // 유저 밋업에 추가할 때 사용할 코드 삭제하지 말 것
     
-          const newRoomRef = window.db.collection('test').where('name','==', this.meetupInfo.title).get()
+          const newRoomRef = window.db.collection('chat').where('name','==', this.meetupInfo.title).get()
           .then(snapshot =>{
             if(snapshot.empty){
               // alert("없다");
@@ -137,7 +137,7 @@ export default {
                 id.push(userid);
                 id.sort()
               }
-              window.db.collection('test').doc(doc.id).set({
+              window.db.collection('chat').doc(doc.id).set({
                 id : id
               },{merge:true});
             })

@@ -54,7 +54,7 @@ export default {
         }
     },
     beforeCreate(){
-        window.db.collection('test').where('id', 'array-contains', this.$cookie.get('userId')).orderBy('update','desc').get()
+        window.db.collection('chat').where('id', 'array-contains', this.$cookie.get('userId')).orderBy('update','desc').get()
                  .then(snapshot=>{
                   //없을경우
                       if(snapshot.empty){
@@ -158,7 +158,7 @@ export default {
         },
         addRoom(){
              if (this.name) {
-                window.db.collection('test').where('id', 'array-contains', this.name).orderby('time').get()
+                window.db.collection('chat').where('id', 'array-contains', this.name).orderby('time').get()
                 .then(snapshot=>{
                     //없을경우
                     if(snapshot.empty){

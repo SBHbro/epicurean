@@ -456,11 +456,11 @@ export default {
     //밋업에대한 채팅방 등록
     createMeetUpChat(){
 
-      const newRoomRef = window.db.collection('test').doc();
+      const newRoomRef = window.db.collection('chat').doc();
                             // console.log(newRoomRef.id);
                             // window.db.collection('test').doc(newRoomRef.id).collection('test').doc();
 
-                             var res = window.db.collection('test').doc(newRoomRef.id).set({
+                             var res = window.db.collection('chat').doc(newRoomRef.id).set({
                                 id :[this.meetup.master],
                                 time : Date.now(),
                                 name : this.meetup.title

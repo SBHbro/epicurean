@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.web.curation</groupId>
 	<artifactId>webcuration</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.4-SNAPSHOT</version>
 	<name>webcuration</name>
 	<packaging>jar</packaging>
 	<description>Web curation project for Spring Boot</description>

@@ -39,12 +39,12 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
         return new ApiInfo(
                 "돈독한미식가",
-                "description",
-                "version",
-                "https://woowacourse.github.io/javable/",
-                new Contact("Contact Me", "https://woowacourse.github.io/javable/", "tigger@tigger.com"),
-                "tigger Licenses",
-                "https://woowacourse.github.io/javable/",
+                "맛집 추천 & 밋업 SNS",
+                "0.0.4",
+                "https://github.com/SBHbro/epicurean/",
+                new Contact("Contact Me", "", "ssd018@gmail.com"),
+                "Licenses",
+                "https://github.com/SBHbro",
                 new ArrayList<>()
         );
     }

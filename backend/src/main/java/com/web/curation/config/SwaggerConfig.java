@@ -44,7 +44,7 @@ public class SwaggerConfig {
                 "https://github.com/SBHbro/epicurean/",
                 new Contact("Contact Me", "", "ssd018@gmail.com"),
                 "Licenses",
-                "https://github.com/SBHbro",
+                "https://github.com/SBHbro1",
                 new ArrayList<>()
         );
     }

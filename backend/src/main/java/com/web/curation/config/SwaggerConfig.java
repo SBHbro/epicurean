@@ -38,7 +38,7 @@ public class SwaggerConfig {
     
     private ApiInfo apiInfo() {
         return new ApiInfo(
-                "title",
+                "돈독한미식가",
                 "description",
                 "version",
                 "https://woowacourse.github.io/javable/",

@@ -11,7 +11,7 @@ VOLUME /tmp
 EXPOSE 8080
 
 # The application's jar file
-ARG JAR_FILE=target/webcuration-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=target/*jar
 ARG KEY_FILE=./keystore.p12
 
 # Add the application's jar to the container

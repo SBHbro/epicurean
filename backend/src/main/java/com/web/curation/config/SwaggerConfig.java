@@ -40,7 +40,7 @@ public class SwaggerConfig {
         return new ApiInfo(
                 "돈독한미식가",
                 "맛집 추천 & 밋업 SNS",
-                "0.0.5",
+                "0.0.6",
                 "https://github.com/SBHbro/epicurean/",
                 new Contact("Contact Me", "", "ssd018@gmail.com"),
                 "Licenses",

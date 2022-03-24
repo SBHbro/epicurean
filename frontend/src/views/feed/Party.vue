@@ -111,7 +111,7 @@
 <script>
 import axios from "axios";
 
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "http://localhost:8080";
 
 export default {
@@ -127,14 +127,14 @@ export default {
   }),
 
   mounted() {
-    if (window.kakao && window.kakao.maps) {
+    if (window.Kakao && window.Kakao.maps) {
       this.initMap();
     } else {
       const script = document.createElement("script");
       /* global kakao */
       script.onload = () => kakao.maps.load(this.initMap);
       script.src =
-        "http://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=722f0c506c2743378fac318284106578";
+        "http://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=6192aa4fccde619ea3ac09491e57abd0";
       document.head.appendChild(script);
     }
   },

@@ -32,7 +32,7 @@
                 <v-list-item>
                   <v-list-item-avatar style="cursor:pointer;" @click="gotoProfile(lst)">
                     <img
-                      :src="`https://i3b302.p.ssafy.io:8080/img/user?imgname=`+list.img"
+                      :src="`https://don.sbbro.shop/api/img/user?imgname=`+list.img"
                     />
                   </v-list-item-avatar>
                   <v-list-item-content>
@@ -69,7 +69,7 @@
                 <v-list-item>
                   <v-list-item-avatar style="cursor:pointer;" @click="gotoProfile(lst)">
                     <img
-                      :src="`https://i3b302.p.ssafy.io:8080/img/user?imgname=`+list.img"
+                      :src="`https://don.sbbro.shop/api/img/user?imgname=`+list.img"
                     />
                   </v-list-item-avatar>
                   <v-list-item-content>
@@ -104,7 +104,7 @@
                 <v-list-item>
                   <v-list-item-avatar style="cursor:pointer;" @click="gotoProfile(lst)">
                     <img
-                      :src="`https://i3b302.p.ssafy.io:8080/img/user?imgname=`+list.img"
+                      :src="`https://don.sbbro.shop/api/img/user?imgname=`+list.img"
                     />
                   </v-list-item-avatar>
                   <v-list-item-content>
@@ -137,7 +137,7 @@
 import moment from 'moment';
 
 import axios from "axios";
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "https://localhost:8080";
 
 export default {

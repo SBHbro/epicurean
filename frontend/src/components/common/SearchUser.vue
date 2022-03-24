@@ -78,7 +78,7 @@
 <script>
 
 import axios from "axios";
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "https://localhost:8080";
 export default {
   name: "components",
@@ -116,7 +116,7 @@ export default {
         this.items = []
         for (let i = 0; i <  response.data.length; i++) {
           let userImg = response.data[i].UserImg;
-          let viewImg = "https://i3b302.p.ssafy.io:8080/img/user?imgname=" + userImg;
+          let viewImg = "https://don.sbbro.shop/api/img/user?imgname=" + userImg;
           this.items.push({
               UserId : response.data[i].UserId,
               UserNickname : response.data[i].UserNickname,
@@ -200,7 +200,7 @@ export default {
         if(response.data != ""){
           for (let i = 0; i < response.data.length; i++) {
             let userImg = response.data[i].UserImg;
-            let viewImg = "https://i3b302.p.ssafy.io:8080"+"/img/user?imgname=" + userImg;
+            let viewImg = "https://don.sbbro.shop/api"+"/img/user?imgname=" + userImg;
             this.items.push({
               UserId : response.data[i].UserId,
               UserNickname : response.data[i].UserNickname,

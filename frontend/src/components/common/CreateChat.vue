@@ -17,7 +17,7 @@
 import axios from "axios";
 import router from "@/routes";
 
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "https://localhost:8080";
 
 export default {
@@ -52,7 +52,7 @@ export default {
                 // // console.log(this.data);
 
             //동일한 채팅방이 있는지 검사한다.
-            window.db.collection('test').where('id', '==', this.data).where('name','==','Room').get()
+            window.db.collection('chat').where('id', '==', this.data).where('name','==','Room').get()
                  .then(snapshot=>{
                   //없을경우
                     var room = {};
@@ -61,11 +61,11 @@ export default {
                             //만들기
 
                             //새로운 채팅방 생성 
-                            const newRoomRef = window.db.collection('test').doc();
+                            const newRoomRef = window.db.collection('chat').doc();
                             // console.log(newRoomRef.id);
-                            window.db.collection('test').doc(newRoomRef.id).collection('test').doc();
+                            window.db.collection('chat').doc(newRoomRef.id).collection('test').doc();
 
-                             var res = window.db.collection('test').doc(newRoomRef.id).set({
+                             var res = window.db.collection('chat').doc(newRoomRef.id).set({
                                 id :this.data,
                                 time : Date.now(),
                                 name : "Room"

@@ -46,7 +46,7 @@ export default {
         }
     },
     created() {
-        let ref = window.db.collection('test').doc('유저이름').collection('채팅방이름').orderBy('id');
+        let ref = window.db.collection('chat').doc('유저이름').collection('채팅방이름').orderBy('id');
         ref.onSnapshot(snapshot => {
             snapshot.docChanges().forEach(change => {
                 if (change.type == 'added') {

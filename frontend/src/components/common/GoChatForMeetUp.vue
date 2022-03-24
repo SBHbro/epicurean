@@ -17,7 +17,7 @@
 import axios from "axios";
 import router from "@/routes";
 
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "https://localhost:8080";
 
 export default {
@@ -34,7 +34,7 @@ export default {
     methods:{
         onClick(){
             // meetup의 이름으로 채팅방을 가져온다.
-            window.db.collection('test').where('name', '==', this.meetup.title).get()
+            window.db.collection('chat').where('name', '==', this.meetup.title).get()
                  .then(snapshot=>{
                      if(snapshot.empty){
                          alert("생성된 채팅방이 없습니다.");

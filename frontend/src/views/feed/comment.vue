@@ -22,7 +22,7 @@
             <span class="prf">
               <img
                 style="height: 100%; width: 100%; -webkit-user-drag: none;"
-                :src="`https://i3b302.p.ssafy.io:8080/img/user?imgname=`+this.myimg"
+                :src="`https://don.sbbro.shop/api/img/user?imgname=`+this.myimg"
               />
             </span>
 
@@ -56,7 +56,7 @@
                   <img
                     @click="gotoProfile({userid:postuserid, userimg: postuserimg})"
                     style="height: 100%; width: 100%; -webkit-user-drag: none;"
-                    :src="`https://i3b302.p.ssafy.io:8080/img/user?imgname=`+postuserimg"
+                    :src="`https://don.sbbro.shop/api/img/user?imgname=`+postuserimg"
                   />
                 </v-list-item-avatar>
                 <v-list-item-content>
@@ -77,7 +77,7 @@
                   <img
                     @click="gotoProfileByComment(lst)"
                     style="height: 100%; width: 100%; -webkit-user-drag: none;"
-                    :src="`https://i3b302.p.ssafy.io:8080/img/user?imgname=`+lst.userimg"
+                    :src="`https://don.sbbro.shop/api/img/user?imgname=`+lst.userimg"
                   />
                 </v-list-item-avatar>
                 <v-list-item-content>
@@ -106,7 +106,7 @@
                   <img
                     @click="gotoProfileByComment(lst)"
                     style="height: 100%; width: 100%; -webkit-user-drag: none;"
-                    :src="`https://i3b302.p.ssafy.io:8080/img/user?imgname=`+lst.userimg"
+                    :src="`https://don.sbbro.shop/api/img/user?imgname=`+lst.userimg"
                   />
                 </v-list-item-avatar>
                 <v-list-item-content>
@@ -139,7 +139,7 @@
 import axios from "axios";
 import $ from "jquery";
 
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "https://localhost:8080";
 
 export default {
@@ -214,7 +214,7 @@ export default {
       }
       // 타 유저 프로필 페이지로 이동
       else{
-        let userImg = `https://i3b302.p.ssafy.io:8080/img/user?imgname=`+user.userimg;
+        let userImg = `https://don.sbbro.shop/api/img/user?imgname=`+user.userimg;
          this.$router.push('/user/profile?userId='+user.userid
         +'&followerFollowing='+true
         +'&userImg='+userImg);
@@ -245,7 +245,7 @@ export default {
         .catch((error) => {
           // // console.log(error.response);
         });
-        let userImg = `https://i3b302.p.ssafy.io:8080/img/user?imgname=`+user.userimg;
+        let userImg = `https://don.sbbro.shop/api/img/user?imgname=`+user.userimg;
          this.$router.push('/user/profile?userId='+user.commentuserid
         +'&followerFollowing='+flag
         +'&userImg='+userImg);

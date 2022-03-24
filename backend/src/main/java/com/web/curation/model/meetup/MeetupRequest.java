@@ -15,8 +15,6 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class MeetupRequest {
 	@Id
 	@Column(name = "id")

@@ -66,7 +66,7 @@
           <v-card flat tile class="d-flex">
               {{lst.postimgurl}}
               <v-img @click="detailInfo(lst,commentlst[i])"
-                :src="`https://i3b302.p.ssafy.io:8080/img/post?imgname=`+lst.post_img_url"
+                :src="`https://don.sbbro.shop/api/img/post?imgname=`+lst.post_img_url"
                 aspect-ratio="1" 
                 class="grey lighten-2"
               >
@@ -96,7 +96,7 @@
 
 <script>
 
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "https://localhost:8080";
 import CreateChat from "../../components/common/CreateChat";
 

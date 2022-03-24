@@ -305,7 +305,7 @@ import axios from "axios";
 import router from "@/routes";
 
 const CURLAT = 36.3587222, CURLNG = 127.3439205;
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "https://localhost:8080";
 
 export default {
@@ -363,6 +363,8 @@ export default {
   },
   mounted() {
     // 현재 위치 확인
+    console.log(this.targetLocation.lat);
+    console.log(this.targetLocation.lng);
     if (navigator.geolocation && Object.keys(this.$route.params).length == 0) {
       navigator.geolocation.getCurrentPosition(pos => {
         this.targetLocation.lat = pos.coords.latitude;
@@ -371,17 +373,18 @@ export default {
     }
 
     // 카카오 맵 로딩
-    // if (window.kakao && window.kakao.maps) {
-    //   // console.log("이미 로딩됨");
-    //   // this.initMap();
-    // } else {
+    if (window.Kakao && window.Kakao.maps) {
+      console.log("이미 로딩됨");
+      this.initMap();
+    } else {
+      console.log("새로로딩");
       const script = document.createElement("script");
       /* global kakao */
-      script.onload = () => kakao.maps.load(this.initMap);
+      script.onload = () => kakao.maps.load(this.initMap());
       script.src =
-        "https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=90891b3c4fa765cd378361c6b16e4dd6&libraries=services";
+        "https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=6192aa4fccde619ea3ac09491e57abd0&libraries=services";
       document.head.appendChild(script);
-    // }
+    }
   },
   methods: {
     clearMarkersAndOverays(){
@@ -516,7 +519,9 @@ export default {
         this.dates[1] = temp;
     },
     initMap() {
+      console.log("루트",this.$route)
       if(Object.keys(this.$route.params).length > 0){
+        console.log("들어오는지")
         this.targetLocation.lat = this.$route.params.lat;
         this.targetLocation.lng = this.$route.params.lng;
       }
@@ -608,62 +613,62 @@ export default {
     },
     getNearMeetups(address){
       // console.log(address);
-      axios
-            .get(`${SERVER_URL}/meetup/search/location/${address.region_1depth_name.slice(0, 2)} ${address.region_2depth_name}`)
-            .then((response) => {
-              // 밋업 리스트
-              // console.log(response)
-              if(response.data.data == "success"){
-                this.meetups = response.data.object;
-                    // console.log(this.meetups)
-                    var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
-                    this.meetups.forEach(meetup => {
-                      // // console.log(meetup)
-                      this.geocoder.addressSearch(meetup.address, (result, status) => {
-                          if (status === kakao.maps.services.Status.OK) {
-                              var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
-                              // marker 생성
-                              var markerImage = new kakao.maps.MarkerImage(imageSrc, new kakao.maps.Size(24, 35));
-                              var marker = new kakao.maps.Marker({
-                                title: meetup.title,
-                                position: coords,
-                                image : markerImage,
-                                clickable: true,
-                              });
+      // axios
+      //       .get(`${SERVER_URL}/meetup/search/location/${address.region_1depth_name.slice(0, 2)} ${address.region_2depth_name}`)
+      //       .then((response) => {
+      //         // 밋업 리스트
+      //         // console.log(response)
+      //         if(response.data.data == "success"){
+      //           this.meetups = response.data.object;
+      //               // console.log(this.meetups)
+      //               var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
+      //               this.meetups.forEach(meetup => {
+      //                 // // console.log(meetup)
+      //                 this.geocoder.addressSearch(meetup.address, (result, status) => {
+      //                     if (status === kakao.maps.services.Status.OK) {
+      //                         var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+      //                         // marker 생성
+      //                         var markerImage = new kakao.maps.MarkerImage(imageSrc, new kakao.maps.Size(24, 35));
+      //                         var marker = new kakao.maps.Marker({
+      //                           title: meetup.title,
+      //                           position: coords,
+      //                           image : markerImage,
+      //                           clickable: true,
+      //                         });
 
-                              // custom overlay infowindow 생성
-                              var overlay = new kakao.maps.CustomOverlay({    
-                                position: marker.getPosition(),
-                                content: 
-                                  `
-                                  <div class="overlay_wrap">
-                                    <div class="overlay_info">
-                                        <a href="#/map/detailMeetup?meetupId=${meetup.id}&lat=${this.targetLocation.lat}&lng=${this.targetLocation.lng}"><strong>${meetup.title}</strong></a>
-                                        <div class="desc">
-                                            <img src="${meetup.img}" width="56" height="56" alt="">
-                                            <div class="date"><label>일시 : </label> ${meetup.date.slice(0, 16)}</div>
-                                            <div class="address"><label>위치 : </label> ${meetup.location}</div>
-                                            <div class="personnel"><label>인원 : </label> ${meetup.curPersonnel} / ${meetup.maxPersonnel}</div>
-                                        </div>
-                                    </div>
-                                  </div>
-                                   `
-                              });
-                              this.overlays.push(overlay);
-                              this.markers.push(marker);
-                              kakao.maps.event.addListener(marker, "click", this.toggleInfoWindow(this.map, marker, overlay, this.overlays));
-                              marker.setMap(this.map);
+      //                         // custom overlay infowindow 생성
+      //                         var overlay = new kakao.maps.CustomOverlay({    
+      //                           position: marker.getPosition(),
+      //                           content: 
+      //                             `
+      //                             <div class="overlay_wrap">
+      //                               <div class="overlay_info">
+      //                                   <a href="#/map/detailMeetup?meetupId=${meetup.id}&lat=${this.targetLocation.lat}&lng=${this.targetLocation.lng}"><strong>${meetup.title}</strong></a>
+      //                                   <div class="desc">
+      //                                       <img src="${meetup.img}" width="56" height="56" alt="">
+      //                                       <div class="date"><label>일시 : </label> ${meetup.date.slice(0, 16)}</div>
+      //                                       <div class="address"><label>위치 : </label> ${meetup.location}</div>
+      //                                       <div class="personnel"><label>인원 : </label> ${meetup.curPersonnel} / ${meetup.maxPersonnel}</div>
+      //                                   </div>
+      //                               </div>
+      //                             </div>
+      //                              `
+      //                         });
+      //                         this.overlays.push(overlay);
+      //                         this.markers.push(marker);
+      //                         kakao.maps.event.addListener(marker, "click", this.toggleInfoWindow(this.map, marker, overlay, this.overlays));
+      //                         marker.setMap(this.map);
                               
-                          } 
-                      });    
+      //                     } 
+      //                 });    
                         
-                    });
+      //               });
 
-              }
+      //         }
           
    
 
-            })
+      //       })
     }
   }
 }

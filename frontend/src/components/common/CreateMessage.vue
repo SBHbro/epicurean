@@ -30,14 +30,14 @@ export default {
     methods: {
         createMessage () {
             if (this.newMessage) {
-                window.db.collection('test').doc(this.rid).collection('messages').add({
+                window.db.collection('chat').doc(this.rid).collection('messages').add({
                     from : this.id,
                     message: this.newMessage,
                     time: Date.now()
                 }).catch(err => {
                     // console.log(err);
                 });
-                window.db.collection('test').doc(this.rid).set({
+                window.db.collection('chat').doc(this.rid).set({
                     update: Date.now(),
                     lastMessage : this.newMessage
                 },{merge : true})

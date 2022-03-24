@@ -270,7 +270,7 @@
 <script>
 import axios from "axios";
 
-const SERVER_URL = "https://i3b302.p.ssafy.io:8080";
+const SERVER_URL = "https://don.sbbro.shop/api";
 // const SERVER_URL = "https://localhost:8080";
 
 export default {
@@ -329,7 +329,7 @@ export default {
         });
       }
 
-      if (window.kakao && window.kakao.maps) {
+      if (window.Kakao && window.Kakao.maps) {
         // // console.log("이미 로딩됨");
         this.initMap();
       } else {
@@ -338,7 +338,7 @@ export default {
         /* global kakao */
         script.onload = () => kakao.maps.load(this.initMap);
         script.src =
-          "https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=90891b3c4fa765cd378361c6b16e4dd6&libraries=services";
+          "https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=6192aa4fccde619ea3ac09491e57abd0&libraries=services";
         document.head.appendChild(script);
       }
   },
@@ -456,11 +456,11 @@ export default {
     //밋업에대한 채팅방 등록
     createMeetUpChat(){
 
-      const newRoomRef = window.db.collection('test').doc();
+      const newRoomRef = window.db.collection('chat').doc();
                             // console.log(newRoomRef.id);
                             // window.db.collection('test').doc(newRoomRef.id).collection('test').doc();
 
-                             var res = window.db.collection('test').doc(newRoomRef.id).set({
+                             var res = window.db.collection('chat').doc(newRoomRef.id).set({
                                 id :[this.meetup.master],
                                 time : Date.now(),
                                 name : this.meetup.title

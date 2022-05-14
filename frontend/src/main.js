@@ -8,7 +8,14 @@ import vuetify from '@/plugins/vuetify'
 import VueCookie from 'vue-cookie'
 
 import VueChatScroll from 'vue-chat-scroll';
-import firestoreConfig from './firestoreConfig'
+//import firestoreConfig from './firestoreConfig'
+var firestoreConfig = { apiKey: "AIzaSyBay9izl5mkxg7aqiIOeYh92-wiLhlwbXE",
+authDomain: "donproject-80dad.firebaseapp.com",
+projectId: "donproject-80dad",
+storageBucket: "donproject-80dad.appspot.com",
+messagingSenderId: "906263330950",
+appId: "1:906263330950:web:5f7d3f927ad9c4093dd107",
+measurementId: "G-7FX64GFJE5"};
 Vue.use(VueChatScroll);
 
 import VueSimpleAlert from "vue-simple-alert";
